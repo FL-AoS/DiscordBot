@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-const {DISCORD_TOKEN, SUGGESTIONS_CHAT} = require("./config.json");
+const {DISCORD_TOKEN, SUGGESTIONS_CHANNEL} = require("./config.json");
 const fs = require("fs");
 const mapCapture = require("./mapCaptures.js");
 const wssBridge = require("./bridge/wsserver.js");
@@ -39,7 +39,7 @@ class Alice extends Discord.Client {
 	}
 
 	async handleMessage(msg) {
-		if (msg.channel.id == SUGGESTIONS_CHAT) {
+		if (msg.channel.id == SUGGESTIONS_CHANNEL) {
 			msg.react("👍");
 			msg.react("👎");
 			return;
