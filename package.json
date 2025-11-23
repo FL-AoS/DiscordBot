@@ -1,0 +1,19 @@
+{
+  "name": "alicemanager",
+  "version": "1.0.0",
+  "description": "Discord bot for FL's AoS community",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["ace of spades", "discord", "bot", "bridge"],
+  "author": "DryByte",
+  "license": "GPLv3",
+  "dependencies": {
+    "aos.js": "github:DryByte/AoS.js",
+    "canvas": "^3.2.0",
+    "discord.js": "^14.25.0",
+    "request": "^2.88.2",
+    "ws": "^8.8.1"
+  }
+}
