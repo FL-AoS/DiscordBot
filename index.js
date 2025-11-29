@@ -64,7 +64,7 @@ class Alice extends Discord.Client {
 				return;
 			} else if (msg_array[1] && c.cmd_channel.includes(msg.channel.id)) {
 				if (msg_array[0] != c.prefix) return;
-				if (!msg.member.permissions.has("BAN_MEMBERS")) return msg.reply("You cant use this.");
+				if (!msg.member.permissions.has(Discord.PermissionsBitField.Flags.BanMembers)) return msg.reply("You cant use this.");
 
 				c.send_msg({
 					server_id: msg_array[0],
