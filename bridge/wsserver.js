@@ -60,10 +60,18 @@ class WSServer {
 							if(args.cmd == "admin") {
 								if (!args.params[0]) return;
 
-								let embed = new Discord.MessageEmbed()
+								let embed = new Discord.EmbedBuilder()
 								.setTitle("NEW REPORT!!")
-								.addField("**Reporter**", `**- Name:** _${args.name}_\n**- Id:** _#${args.player_id}_\n**- Ip:** _${args.ip}_`)
-								.addField("**Report**", `**-** _${args.params.join(" ")}_`)
+								.addFields([
+									{
+										name: "**Reporter**",
+										value: `**- Name:** _${args.name}_\n**- Id:** _#${args.player_id}_\n**- Ip:** _${args.ip}_`
+									},
+									{
+										name: "**Report**",
+										value: `**-** _${args.params.join(" ")}_`
+									}
+								])
 								.setColor([217, 23, 9])
 								.setTimestamp();
 
